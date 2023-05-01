@@ -52,7 +52,7 @@ public class CartController {
     return ResponseEntity.of(service.updateQuantity(name, item));
   }
 
-  @DeleteMapping()
+  @DeleteMapping("{productId}")
   public ResponseEntity<Cart> removeItem(@PathVariable() String name, @PathVariable() String productId) {
     return ResponseEntity.of(service.removeItem(name, productId));
   }
